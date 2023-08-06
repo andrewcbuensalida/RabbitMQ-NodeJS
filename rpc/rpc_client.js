@@ -20,7 +20,7 @@ const getFib = async () => {
 
   channel.sendToQueue('rpc_queue', Buffer.from(num.toString()), {
     replyTo: q.queue,
-    correlationId: uuid
+    correlationId: uuid // this is unique for every request, so we know what response belongs to it's request.
   });
 
   channel.consume(q.queue, msg => {

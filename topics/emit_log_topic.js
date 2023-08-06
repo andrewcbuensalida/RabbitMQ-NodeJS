@@ -3,7 +3,7 @@ const amqplib = require('amqplib');
 const exchangeName = "topic_logs";
 const args = process.argv.slice(2);
 const msg = args[1] || 'Subscribe, Like, Comment';
-const key = args[0]
+const key = args[0] // ex. anonymous.info
 
 console.log(args, msg);
 
